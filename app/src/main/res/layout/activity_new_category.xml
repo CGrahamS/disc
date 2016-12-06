@@ -59,7 +59,8 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Add Category"/>
+            android:text="Add Category"
+            android:id="@+id/addCategoryButton"/>
 
     </LinearLayout>
 
