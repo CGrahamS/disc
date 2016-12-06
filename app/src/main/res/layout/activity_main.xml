@@ -25,6 +25,8 @@
         android:text="Discussion Categories"
         android:id="@+id/listLabelTextView"/>
 
+    <!--TODO change to firebaseui list-->
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
