@@ -13,7 +13,6 @@ import java.util.List;
 public class Category {
     private String name;
     private String description;
-    private List<String> posts = new ArrayList<>();
 
     public Category(String name, String description) {
         this.name = name;
@@ -29,10 +28,6 @@ public class Category {
 
     public String getDescription() {
         return description;
-    }
-
-    public List<String> getPosts() {
-        return posts;
     }
 
 }

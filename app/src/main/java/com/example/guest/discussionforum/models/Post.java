@@ -8,18 +8,21 @@ import java.security.Timestamp;
 public class Post {
     private String postTitle;
     private String postContent;
-    private Timestamp postTime;
+    private String parentCategory;
+//    private Timestamp postTime;
 
-    public Post(String postTitle, String postContent, Timestamp postTime) {
+//    public Post(String postTitle, String postContent, Timestamp postTime) {
+//        this.postTitle = postTitle;
+//        this.postContent = postContent;
+//        this.postTime = postTime;
+//    }
+
+    public Post() {}
+
+    public Post(String postTitle, String postContent, String parentCategory) {
         this.postTitle = postTitle;
         this.postContent = postContent;
-        this.postTime = postTime;
-    }
-
-    public Post(String postTitle, String postContent) {
-        this.postTitle = postTitle;
-        this.postContent = postContent;
-        this.postTime = postTime;
+        this.parentCategory = parentCategory;
     }
 
     public String getPostTitle() {
@@ -30,7 +33,11 @@ public class Post {
         return postContent;
     }
 
-    public Timestamp getPostTime() {
-        return postTime;
+    public String getParentCategory() {
+        return parentCategory;
     }
+
+//    public Timestamp getPostTime() {
+//        return postTime;
+//    }
 }

@@ -10,8 +10,12 @@ import android.widget.Toast;
 import com.example.guest.discussionforum.Constants;
 import com.example.guest.discussionforum.R;
 import com.example.guest.discussionforum.models.Category;
+import com.example.guest.discussionforum.models.Post;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

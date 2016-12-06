@@ -79,8 +79,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.d("ListView", clickedItem.toString());
             }
         });
-
-
     }
 
     @Override
