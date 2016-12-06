@@ -24,7 +24,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.MainActivity" />
         </activity>
-        <activity android:name=".ui.CategoryDetailActivity"></activity>
+        <activity android:name=".ui.CategoryDetailActivity" />
+        <activity android:name=".ui.NewPostActivity"></activity>
     </application>
 
 </manifest>
