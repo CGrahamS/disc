@@ -16,6 +16,12 @@ public class Post {
         this.postTime = postTime;
     }
 
+    public Post(String postTitle, String postContent) {
+        this.postTitle = postTitle;
+        this.postContent = postContent;
+        this.postTime = postTime;
+    }
+
     public String getPostTitle() {
         return postTitle;
     }

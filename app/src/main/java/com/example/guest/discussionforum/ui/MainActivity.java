@@ -28,6 +28,7 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private DatabaseReference mSavedCategories;
     private FirebaseListAdapter<Category> mAdapter;
+    private ValueEventListener mSavedCategoriesListener;
     @Bind(R.id.categoryListView) ListView mCategoryListView;
     @Bind(R.id.newCategoryButton) Button mNewCategoryButton;
 
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .getReference()
                 .child(Constants.FIREBASE_CHILD_CATEGORY_TO_ADD);
 
-        mSavedCategories.addValueEventListener(new ValueEventListener() {
+        mSavedCategoriesListener =  mSavedCategories.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot categorySnapshot: dataSnapshot.getChildren()) {
@@ -81,6 +82,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mSavedCategories.removeEventListener(mSavedCategoriesListener);
+    }
+
 
     @Override
     public void onClick(View v) {

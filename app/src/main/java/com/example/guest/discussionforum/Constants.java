@@ -5,4 +5,5 @@ package com.example.guest.discussionforum;
  */
 public class Constants {
     public static final String FIREBASE_CHILD_CATEGORY_TO_ADD = "categories";
+    public static final String FIREBASE_CHILD_POST_TO_ADD = "posts";
 }

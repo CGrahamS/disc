@@ -35,13 +35,15 @@ public class CategoryDetailActivity extends AppCompatActivity implements View.On
         mCategory = Parcels.unwrap(getIntent().getParcelableExtra("category"));
         mCategoryName.setText(mCategory.getName());
         mCategoryDescription.setText(mCategory.getDescription());
-
+        mNewPostButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         if (v == mNewPostButton)  {
             Intent intent = new Intent(CategoryDetailActivity.this, NewPostActivity.class);
+            intent.putExtra("category", Parcels.wrap(mCategory));
+            startActivity(intent);
         }
     }
 }
