@@ -7,38 +7,31 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.guest.discussionforum.ui.MainActivity">
+    tools:context="com.example.guest.discussionforum.ui.CategoryDetailActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="24sp"
+        android:textStyle="bold"
         android:gravity="center"
-        android:text="PDX Comedy Forum"
-        android:id="@+id/mainHeaderTextView"/>
+        android:text="Name"
+        android:id="@+id/categoryDetailNameTextView"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/categoryDetailNameTextView"
         android:textSize="20sp"
-        android:layout_below="@+id/mainHeaderTextView"
-        android:text="Discussion Categories"
-        android:id="@+id/listLabelTextView"/>
-
-    <!--TODO change to firebaseui list-->
+        android:textStyle="italic"
+        android:text="Description"
+        android:id="@+id/categoryDetailDescriptionTextView"/>
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/newCategoryButton"
-        android:layout_below="@id/listLabelTextView"
-        android:id="@+id/categoryListView"/>
+        android:layout_below="@+id/categoryDetailDescriptionTextView"
+        android:id="@+id/categoryDetailPostListView" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:text="Add New Category"
-        android:id="@+id/newCategoryButton"/>
 
 </RelativeLayout>

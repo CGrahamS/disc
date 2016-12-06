@@ -44,6 +44,8 @@ public class NewCategoryActivity extends AppCompatActivity implements View.OnCli
                     .getReference()
                     .child(Constants.FIREBASE_CHILD_CATEGORY_TO_ADD);
             categoriesReference.push().setValue(mCategory);
+            mCategoryNameEditText.setText("");
+            mCategoryDescriptionEditText.setText("");
             Toast.makeText(NewCategoryActivity.this, "Saved", Toast.LENGTH_SHORT).show();
         }
     }
