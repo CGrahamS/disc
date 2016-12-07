@@ -2,6 +2,7 @@ package com.example.guest.discussionforum.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -47,7 +48,10 @@ public class NewCategoryActivity extends AppCompatActivity implements View.OnCli
                     .getInstance()
                     .getReference()
                     .child(Constants.FIREBASE_CHILD_CATEGORY_TO_ADD);
-            categoriesReference.push().setValue(mCategory);
+            DatabaseReference ref = categoriesReference.push();
+            String categoryId = ref.getKey();
+            mCategory.setId(categoryId);
+            ref.setValue(mCategory);
             mCategoryNameEditText.setText("");
             mCategoryDescriptionEditText.setText("");
             Toast.makeText(NewCategoryActivity.this, "Saved", Toast.LENGTH_SHORT).show();

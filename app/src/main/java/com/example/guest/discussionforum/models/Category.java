@@ -11,6 +11,8 @@ import java.util.List;
 
 @Parcel
 public class Category {
+
+    private String id;
     private String name;
     private String description;
 
@@ -28,6 +30,14 @@ public class Category {
 
     public String getDescription() {
         return description;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
 }

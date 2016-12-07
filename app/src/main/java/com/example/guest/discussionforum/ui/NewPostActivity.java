@@ -42,7 +42,7 @@ public class NewPostActivity extends AppCompatActivity implements View.OnClickLi
         if (v == mAddPostButton) {
             String title = mPostTitleEditText.getText().toString();
             String body = mPostBodyEditText.getText().toString();
-            String parentCategory = mCategory.getName();
+            String parentCategory = mCategory.getId();
             Post post = new Post(title, body, parentCategory);
             DatabaseReference postsReference = FirebaseDatabase
                     .getInstance()

@@ -56,10 +56,11 @@ public class CategoryDetailActivity extends AppCompatActivity implements View.On
                 .getInstance()
                 .getReference()
                 .child(Constants.FIREBASE_CHILD_POST_TO_ADD)
-                .orderByChild("parentCategory")
-                .equalTo(mCategory.getName());
+                .orderByChild("categoryId")
+                .equalTo(mCategory.getId());
 
         mSavedPostsListener = mSavedPosts.addValueEventListener(new ValueEventListener() {
+
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {

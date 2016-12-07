@@ -1,14 +1,12 @@
 package com.example.guest.discussionforum.models;
 
-import java.security.Timestamp;
-
 /**
  * Created by Guest on 12/6/16.
  */
 public class Post {
     private String postTitle;
     private String postContent;
-    private String parentCategory;
+    private String categoryId;
 //    private Timestamp postTime;
 
 //    public Post(String postTitle, String postContent, Timestamp postTime) {
@@ -19,10 +17,10 @@ public class Post {
 
     public Post() {}
 
-    public Post(String postTitle, String postContent, String parentCategory) {
+    public Post(String postTitle, String postContent, String categoryId) {
         this.postTitle = postTitle;
         this.postContent = postContent;
-        this.parentCategory = parentCategory;
+        this.categoryId = categoryId;
     }
 
     public String getPostTitle() {
@@ -33,8 +31,8 @@ public class Post {
         return postContent;
     }
 
-    public String getParentCategory() {
-        return parentCategory;
+    public String getCategoryId() {
+        return categoryId;
     }
 
 //    public Timestamp getPostTime() {
